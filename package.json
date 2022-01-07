@@ -6,6 +6,8 @@
   "scripts": {
     "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "jest --no-cache",
+    "test:dev": "jest --watch",
+    "test:coverage": "jest --coverage --no-cache",
     "prepare": "husky install"
   },
   "repository": {
