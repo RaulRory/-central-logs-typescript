@@ -1,5 +1,5 @@
 import { createServer, Server } from 'http';
-import { app } from '../src/app';
+import { app } from '../../src/app';
 
 let server: Server;
 
