@@ -10,18 +10,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum types_error {
+enum TypesError {
   ERROR
   WARNING
   BUG
 }
 
 model Logs {
-  id        Int         @id @default(autoincrement())
-  type      types_error
+  id        Int        @id @default(autoincrement())
+  type      TypesError
   origin    String
   statuCode Int?
-  User      User?       @relation(fields: [userId], references: [id])
+  User      User?      @relation(fields: [userId], references: [id])
   userId    Int?
 }
 
