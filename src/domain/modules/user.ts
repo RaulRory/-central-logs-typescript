@@ -2,17 +2,12 @@ import { Log } from './log';
 
 export class User {
   constructor(
-    private readonly _id: number,
     private readonly _name: string,
     private readonly _email: string,
     private readonly _password: string,
     private readonly _logs: Log[],
     private readonly _username?: string
   ) {}
-
-  get id(): number {
-    return this._id;
-  }
 
   get name(): string {
     return this._name;
