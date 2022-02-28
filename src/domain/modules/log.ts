@@ -1,36 +1,44 @@
 import { User } from './user';
+import { TypesError } from '@prisma/client';
 
-enum TypesError {
-  ERROR,
-  WARNING,
-  BUG
-}
 export class Log {
+  public type: TypesError;
+  public origin: string;
+  public userId: number;
+  public statusCode?: number;
+  public user?: User;
+
   constructor(
-    private readonly _type: TypesError,
-    private readonly _origin: string,
-    private readonly _statusCode?: number,
-    private readonly _user?: User,
-    private readonly _userId?: number
-  ) {}
-
-  get type(): TypesError {
-    return this._type;
+    type: TypesError,
+    origin: string,
+    userId: number,
+    statusCode?: number,
+    user?: User
+  ) {
+    this.type = type;
+    this.origin = origin;
+    this.userId = userId;
+    this.statusCode = statusCode;
+    this.user = user;
   }
 
-  get origin(): string {
-    return this._origin;
-  }
+  // getType(): TypesError {
+  //   return this.type;
+  // }
 
-  get statusCode(): number | undefined {
-    return this._statusCode;
-  }
+  // getOrigin(): string {
+  //   return this.origin;
+  // }
 
-  get user(): User | undefined {
-    return this._user;
-  }
+  // getStatusCode(): number | undefined {
+  //   return this.statusCode;
+  // }
 
-  get userId(): number | undefined {
-    return this._userId;
-  }
+  // getUser(): User | undefined {
+  //   return this.user;
+  // }
+
+  // getUserId(): number | undefined {
+  //   return this.userId;
+  // }
 }
