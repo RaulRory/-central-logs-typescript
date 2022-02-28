@@ -1,31 +1,43 @@
 import { Log } from './log';
 
 export class User {
+  public name: string;
+  public email: string;
+  public password: string;
+  public logs?: Log[];
+  public username?: string;
+
   constructor(
-    private readonly _name: string,
-    private readonly _email: string,
-    private readonly _password: string,
-    private readonly _logs: Log[],
-    private readonly _username?: string
-  ) {}
-
-  get name(): string {
-    return this._name;
+    name: string,
+    email: string,
+    password: string,
+    logs?: Log[],
+    username?: string
+  ) {
+    this.name = name;
+    this.email = email;
+    this.password = password;
+    this.logs = logs;
+    this.username = username;
   }
 
-  get username(): string | undefined {
-    return this._username;
-  }
+  // getName(): string {
+  //   return this.name;
+  // }
 
-  get email(): string {
-    return this._email;
-  }
+  // getUsername(): string | undefined {
+  //   return this.username;
+  // }
 
-  get password(): string {
-    return this._password;
-  }
+  // getEmail(): string {
+  //   return this.email;
+  // }
 
-  get logs(): Log[] {
-    return this._logs;
-  }
+  // getPassword(): string {
+  //   return this.password;
+  // }
+
+  // getLogs(): Log[] {
+  //   return this.logs;
+  // }
 }
