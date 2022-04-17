@@ -21,24 +21,4 @@ export class Log {
     this.statusCode = statusCode;
     this.user = user;
   }
-
-  // getType(): TypesError {
-  //   return this.type;
-  // }
-
-  // getOrigin(): string {
-  //   return this.origin;
-  // }
-
-  // getStatusCode(): number | undefined {
-  //   return this.statusCode;
-  // }
-
-  // getUser(): User | undefined {
-  //   return this.user;
-  // }
-
-  // getUserId(): number | undefined {
-  //   return this.userId;
-  // }
 }

@@ -20,24 +20,4 @@ export class User {
     this.logs = logs;
     this.username = username;
   }
-
-  // getName(): string {
-  //   return this.name;
-  // }
-
-  // getUsername(): string | undefined {
-  //   return this.username;
-  // }
-
-  // getEmail(): string {
-  //   return this.email;
-  // }
-
-  // getPassword(): string {
-  //   return this.password;
-  // }
-
-  // getLogs(): Log[] {
-  //   return this.logs;
-  // }
 }
