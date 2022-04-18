@@ -20,7 +20,7 @@ Este repositório contém uma nova solução para o projeto [Central de Erros](h
     sudo usermod -aG docker $USER
 ```
 
-# Testando
+## Testando
 
 - Para inicar a instalar as dependencias e inicar aplicação rode o comando
 ```bash
